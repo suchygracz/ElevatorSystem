@@ -1,0 +1,62 @@
+body {
+    background-color: #f8f8f8; /* Off-white color */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.elevator-grid {
+    display: flex;
+    gap: 20px; /* Space between columns */
+    padding: 20px; /* Add padding to the grid container */
+}
+
+.elevator {
+    display: flex;
+    flex-direction: column-reverse;
+    border: 2px solid #2828287f;
+    width: 50px;
+    padding: 5px; /* Padding inside each elevator column */
+    border-radius: 10px; /* Rounded corners for each elevator column */
+    gap: 10px;
+}
+
+.floor {
+    position: relative;
+    height: 50px; /* Increase height to accommodate both buttons */
+    border: 2px solid #28282883;
+    border-radius: 10px; /* Rounded corners for each floor */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Adjust content to fit within the height */
+    align-items: center;
+}
+
+.floor.current {
+    background-color: rgb(138, 138, 138);
+}
+
+button {
+    width: 100%; /* Make buttons as wide as the floor */
+    height: 50%; /* Each button takes up half the height of the floor cell */
+    font-size: 16px;
+    line-height: 1;
+    border: none;
+    border-radius: 0; /* No rounded corners */
+    cursor: pointer;
+}
+
+.up-button {
+    background-color: rgb(74, 74, 74);
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.down-button {
+    background-color: rgb(74, 74, 74);
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
